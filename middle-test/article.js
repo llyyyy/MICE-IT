@@ -50,25 +50,25 @@ function callbackStudentAjax(responseText){
 	// 뉴스
 	parseString = [];
 	var news = '';
-	for(var i=0; i<articleData[0].length; i++ ){
-		news = articleData[0][i];
-		parseString.push( template(templateString, {title : articleData[0][i].title}  ) );
+	for(var i=0; i<articleData[0].news.length; i++ ){
+		news = articleData[0].news[i];
+		parseString.push( template(templateString, {title : articleData[0].news[i].title}  ) );
 	}
 	getDom('newsContents').innerHTML = parseString.join("");
 	// 연예
 	parseString = [];
 	var enter = '';
-	for(var i=0; i<articleData[0].length; i++ ){
-		enter = articleData[0][i];
-		parseString.push( template(templateString, {title : articleData[0][i].title}  ) );
+	for(var i=0; i<articleData[0].enter.length; i++ ){
+		enter = articleData[0].enter[i];
+		parseString.push( template(templateString, {title : articleData[0].enter[i].title}  ) );
 	}
 	getDom('enterContents').innerHTML = parseString.join("");
 	// 스포츠
 	parseString = [];
 	var sports = '';
-	for(var i=0; i<articleData[0].length; i++ ){
-		sports = articleData[0][i];
-		parseString.push( template(templateString, {title : articleData[0][i].title}  ) );
+	for(var i=0; i<articleData[0].sports.length; i++ ){
+		sports = articleData[0].sports[i];
+		parseString.push( template(templateString, {title : articleData[0].sports[i].title}  ) );
 	}
 	getDom('sportsContents').innerHTML = parseString.join("");
 }
