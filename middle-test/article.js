@@ -50,7 +50,7 @@ function newsTemplateAjax(templateString,articleData,length) {
 						+ template(templateString, {articleTitle : articleData[0].news[i].title, newsId : articleData[0].news[i].newsId})
 						+ '</ul></div>');
 	}
-	var stringSplice = parseString.splice(0, typeof length == "undefined" ? length : parseString.length);
+	var stringSplice = parseString.splice(0, typeof length != "undefined" ? length : parseString.length);
 	getDom('newsContents').innerHTML = stringSplice.join("");
 }
 
@@ -64,7 +64,7 @@ function enterTemplateAjax(templateString,articleData,length) {
 						+ template(templateString, {articleTitle : articleData[1].enter[i].title, newsId : articleData[1].enter[i].newsId})
 						+ '</ul></div>');
 	}
-	var stringSplice = parseString.splice(0, typeof length == "undefined" ? length : parseString.length);
+	var stringSplice = parseString.splice(0, typeof length != "undefined" ? length : parseString.length);
 	getDom('enterContents').innerHTML = stringSplice.join("");
 }
 
@@ -78,7 +78,7 @@ function sportsTemplateAjax(templateString,articleData,length) {
 						+ template(templateString, {articleTitle : articleData[2].sports[i].title, newsId : articleData[2].sports[i].newsId})
 						+ '</ul></div>');
 	}
-	var stringSplice = parseString.splice(0, typeof length == "undefined" ? length : parseString.length);
+	var stringSplice = parseString.splice(0, typeof length != "undefined" ? length : parseString.length);
 	getDom('sportsContents').innerHTML = stringSplice.join("");
 }
 
