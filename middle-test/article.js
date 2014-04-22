@@ -112,22 +112,19 @@ function start() {
 
 }
 function showNews(){
-	getDom('newsContents').style.display="none";
-	getDom('enterContents').style.display="none";
-	getDom('sportsContents').style.display="none";
-	getDom('newsContents').style.display="";
+	getDom('newsContents').className = "show";
+	getDom('enterContents').className = "hide";
+	getDom('sportsContents').className = "hide";
 }
 function showEnter(){
-	getDom('newsContents').style.display="none";
-	getDom('enterContents').style.display="none";
-	getDom('sportsContents').style.display="none";
-	getDom('enterContents').style.display="";
+	getDom('newsContents').className = "hide";
+	getDom('enterContents').className = "show";
+	getDom('sportsContents').className = "hide";
 }
 function showSports(){
-	getDom('newsContents').style.display="none";
-	getDom('enterContents').style.display="none";
-	getDom('sportsContents').style.display="none";
-	getDom('sportsContents').style.display="";
+	getDom('newsContents').className = "hide";
+	getDom('enterContents').className = "hide";
+	getDom('sportsContents').className = "show";
 }
 
 //시작 
