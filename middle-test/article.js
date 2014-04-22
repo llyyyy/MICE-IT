@@ -75,6 +75,7 @@ function callbackStudentAjax(responseText){
 
 function start(){
 	callAjax('articleData.js', callbackStudentAjax);
+	
 }
 
 
