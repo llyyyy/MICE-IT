@@ -111,7 +111,24 @@ function start() {
 	callAjax('articleData.js', callbackArticleAjax);
 
 }
-
+function showNews(){
+	getDom('newsContents').style.display="none";
+	getDom('enterContents').style.display="none";
+	getDom('sportsContents').style.display="none";
+	getDom('newsContents').style.display="";
+}
+function showEnter(){
+	getDom('newsContents').style.display="none";
+	getDom('enterContents').style.display="none";
+	getDom('sportsContents').style.display="none";
+	getDom('enterContents').style.display="";
+}
+function showSports(){
+	getDom('newsContents').style.display="none";
+	getDom('enterContents').style.display="none";
+	getDom('sportsContents').style.display="none";
+	getDom('sportsContents').style.display="";
+}
 
 //시작 
 start();
