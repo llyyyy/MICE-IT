@@ -3,15 +3,24 @@
 <head>
 	<meta charset="UTF-8">
 	<title>많이 본 기사 탭 만들기_2012104139_양지현</title>
-	<link rel="stylesheet" type="text/css" href="article.css">
+	<!-- 부트스트랩 CDN -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+	<!-- local css -->
+	<link rel="stylesheet" type="text/css" href="article.css" />
 </head>
 <body>
 
 <div id="container">
-	<ol>
-		<li class="tap">뉴스<div id="newsContents"></div></li>
-		<li class="tap">연예<div id="enterContents"></div></li>
-		<li class="tap">스포츠<div id="sportsContents"></div></li>
+	<ol class="nav nav-tabs">
+		<li>뉴스<div id="newsContents"></div></li>
+		<li>연예<div id="enterContents"></div></li>
+		<li>스포츠<div id="sportsContents"></div></li>
 	</ol>
 	<button id="moreArticleBtn">더보기</button>
 </div>
