@@ -16,23 +16,29 @@ a:active, a:hover {text-decoration:underline}
 	float:left;
 }
 
-.nav-tap li {
-	float: left;
-}
-#newsContents {
+.articleWrap {
+	clear: both;
 
+}
+
+.news-tab {
 /*	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333;
 	background-color: #fff;*/
 }
-#enterContents {
+
+.enter-tab {
 /*	margin-right: 2px;
 	line-height: 1.42857143;
 	border: 1px solid transparent;
 	border-radius: 4px 4px 0 0;
 	color: #2a6496;*/
+}
+
+.sports-tab {
+
 }
 
 

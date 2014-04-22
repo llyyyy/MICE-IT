@@ -9,10 +9,19 @@
 
 <div id="container">
 	<ol class="nav-tabs">
-		<li onclick="showNews()">뉴스<div id="newsContents" ></div></li>
-		<li onclick="showEnter()">연예<div id="enterContents" class="hide"></div></li>
-		<li onclick="showSports()">스포츠<div id="sportsContents" class="hide"></div></li>
+		<li onclick="showNews()" class="news-tab">
+			뉴스</li>
+		<li onclick="showEnter()" class="enter-tab">
+			연예</li>
+		<li onclick="showSports()" class="sports-tab">
+			스포츠</li>
 	</ol>
+	<div class="articleWrap">
+		<div id="newsContents" ></div>
+		<div id="enterContents" class="hide"></div>
+		<div id="sportsContents" class="hide"></div>
+	</div>
+
 	<button id="moreArticleBtn">더보기</button>
 </div>
 
