@@ -39,18 +39,20 @@ function getDom(id) {
 }
 
 function newsTemplateAjax(templateString,articleData) {
-	// 뉴스 템플
+	// 뉴스 템플릿
 	var parseString = [];
 	var news = '';
 	for(var i=0; i<articleData[0].news.length; i++ ){
 		news = articleData[0].news[i];
-		parseString.push( template(templateString, {newsId : articleData[0].news[i].title}  ) );
+		parseString.push('<div class="news">'
+						+ template(templateString, {newsId : articleData[0].news[i].title})
+						+ '</div>');
 	}
 	getDom('newsContents').innerHTML = parseString.join("");
 }
 
 function enterTemplateAjax(templateString,articleData) {
-	// 연예
+	// 연예 템플릿
 	var parseString = [];
 	var enter = '';
 	for(var i=0; i<articleData[1].enter.length; i++ ){
@@ -61,7 +63,7 @@ function enterTemplateAjax(templateString,articleData) {
 }
 
 function sportsTemplateAjax(templateString,articleData) {
-	// 스포츠
+	// 스포츠 템플릿
 	var parseString = [];
 	var sports = '';
 	for(var i=0; i<articleData[2].sports.length; i++ ){
