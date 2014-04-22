@@ -7,6 +7,26 @@ a {color:#333;text-decoration:none}
 a:active, a:hover {text-decoration:underline}
 
 /* 본문 */
+#container {
+	width:80%;
+	margin: 10px auto;
+}
+
+#newsContents {
+/*	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
+#enterContents {
+	margin-right: 2px;
+	line-height: 1.42857143;
+	border: 1px solid transparent;
+	border-radius: 4px 4px 0 0;
+	color: #2a6496;
+}
+
 
 /* 클래스 */
 .show {
@@ -14,4 +34,5 @@ a:active, a:hover {text-decoration:underline}
 }
 .hide {
 	display: none;
+
 }
