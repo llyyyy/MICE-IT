@@ -112,22 +112,32 @@ function start() {
 
 }
 function showNews(){
+	newsTemplateAjax(templateString,articleData,5);
+	enterTemplateAjax(templateString,articleData,5);
+	sportsTemplateAjax(templateString,articleData,5);
 
 	getDom('newsContents').className = "show";
 	getDom('enterContents').className = "hide";
 	getDom('sportsContents').className = "hide";
-	news = getDom('newsContents'.children);
-	for(var i = 5, length = news.length; i < length; i++) {
-		news[i].remove();
-	}
+	// news = getDom('newsContents'.children);
+	// for(var i = 5, length = news.length; i < length; i++) {
+	// 	news[i].remove();
+	// }
 }
 function showEnter(){
+	newsTemplateAjax(templateString,articleData,5);
+	enterTemplateAjax(templateString,articleData,5);
+	sportsTemplateAjax(templateString,articleData,5);
 
 	getDom('newsContents').className = "hide";
 	getDom('enterContents').className = "show";
 	getDom('sportsContents').className = "hide";
 }
 function showSports(){
+	newsTemplateAjax(templateString,articleData,5);
+	enterTemplateAjax(templateString,articleData,5);
+	sportsTemplateAjax(templateString,articleData,5);
+
 	getDom('newsContents').className = "hide";
 	getDom('enterContents').className = "hide";
 	getDom('sportsContents').className = "show";
