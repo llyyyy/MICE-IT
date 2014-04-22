@@ -55,7 +55,7 @@ function enterTemplateAjax(templateString,articleData) {
 	var enter = '';
 	for(var i=0; i<articleData[1].enter.length; i++ ){
 		enter = articleData[1].enter[i];
-		parseString.push( template(templateString, {enterId : articleData[1].enter[i].title}  ) );
+		parseString.push( template(templateString, {newsId : articleData[1].enter[i].title}  ) );
 	}
 	getDom('enterContents').innerHTML = parseString.join("");
 }
@@ -66,7 +66,7 @@ function sportsTemplateAjax(templateString,articleData) {
 	var sports = '';
 	for(var i=0; i<articleData[2].sports.length; i++ ){
 		sports = articleData[2].sports[i];
-		parseString.push( template(templateString, {sportsId : articleData[2].sports[i].title}  ) );
+		parseString.push( template(templateString, {newsId : articleData[2].sports[i].title}  ) );
 	}
 	getDom('sportsContents').innerHTML = parseString.join("");
 }
