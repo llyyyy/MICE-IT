@@ -115,7 +115,7 @@ function showNews(){
 
 	news = getDom('newsContents'.children);
 	for(var i = 5, length = news.length; i < length; i++) {
-		news[5].remove();
+		news[i].remove();
 	}
 	getDom('newsContents').className = "show";
 	getDom('enterContents').className = "hide";
@@ -124,7 +124,7 @@ function showNews(){
 function showEnter(){
 	enter = getDom('enterContents'.children);
 	for(var i = 5, length = enter.length; i < length; i++) {
-		enter[5].remove();
+		enter[i].remove();
 	}
 	getDom('newsContents').className = "hide";
 	getDom('enterContents').className = "show";
@@ -133,7 +133,7 @@ function showEnter(){
 function showSports(){
 	sports = getDom('sportsContents'.children);
 	for(var i = 5, length = sports.length; i < length; i++) {
-		sports[5].remove();
+		sports[i].remove();
 	}
 	getDom('newsContents').className = "hide";
 	getDom('enterContents').className = "hide";
