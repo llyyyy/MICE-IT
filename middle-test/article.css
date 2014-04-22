@@ -10,7 +10,7 @@ a:active, a:hover {text-decoration:underline}
 
 /* 클래스 */
 .show {
-	display: ;
+	display:block ;
 }
 .hide {
 	display: none;
