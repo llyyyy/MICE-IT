@@ -1,3 +1,4 @@
+var articleData = [];
 /**
 	https://gist.github.com/tkissing/1347239
 */
@@ -38,7 +39,7 @@ function getDom(id) {
 	return document.getElementById(id);
 }
 
-function newsTemplateAjax(templateString,articleData) {
+function newsTemplateAjax(templateString,articleData,length) {
 	// 뉴스 템플릿
 	var parseString = [];
 	var news = '';
@@ -49,11 +50,11 @@ function newsTemplateAjax(templateString,articleData) {
 						+ template(templateString, {articleTitle : articleData[0].news[i].title, newsId : articleData[0].news[i].newsId})
 						+ '</ul></div>');
 	}
-	var stringSplice = parseString.splice(0, 5);
+	var stringSplice = parseString.splice(0, typeof length == "undefined" ? length : parseString.length);
 	getDom('newsContents').innerHTML = stringSplice.join("");
 }
 
-function enterTemplateAjax(templateString,articleData) {
+function enterTemplateAjax(templateString,articleData,length) {
 	// 연예 템플릿
 	var parseString = [];
 	var enter = '';
@@ -63,11 +64,11 @@ function enterTemplateAjax(templateString,articleData) {
 						+ template(templateString, {articleTitle : articleData[1].enter[i].title, newsId : articleData[1].enter[i].newsId})
 						+ '</ul></div>');
 	}
-	var stringSplice = parseString.splice(0, 5);
+	var stringSplice = parseString.splice(0, typeof length == "undefined" ? length : parseString.length);
 	getDom('enterContents').innerHTML = stringSplice.join("");
 }
 
-function sportsTemplateAjax(templateString,articleData) {
+function sportsTemplateAjax(templateString,articleData,length) {
 	// 스포츠 템플릿
 	var parseString = [];
 	var sports = '';
@@ -77,8 +78,15 @@ function sportsTemplateAjax(templateString,articleData) {
 						+ template(templateString, {articleTitle : articleData[2].sports[i].title, newsId : articleData[2].sports[i].newsId})
 						+ '</ul></div>');
 	}
-	var stringSplice = parseString.splice(0, 5);
+	var stringSplice = parseString.splice(0, typeof length == "undefined" ? length : parseString.length);
 	getDom('sportsContents').innerHTML = stringSplice.join("");
+}
+
+function moreBtnFunc() {
+	var templateString = getDom('articleTemplate').innerHTML;
+	newsTemplateAjax(templateString,articleData);
+	enterTemplateAjax(templateString,articleData);
+	sportsTemplateAjax(templateString,articleData);
 }
 
 function callbackArticleAjax(responseText) {
@@ -90,9 +98,13 @@ function callbackArticleAjax(responseText) {
 	var parseString = [];
 
 	// articleData 분석 및 템플릿에 적용
-	newsTemplateAjax(templateString,articleData);
-	enterTemplateAjax(templateString,articleData);
-	sportsTemplateAjax(templateString,articleData);
+	newsTemplateAjax(templateString,articleData,5);
+	enterTemplateAjax(templateString,articleData,5);
+	sportsTemplateAjax(templateString,articleData,5);
+
+	var moreBtn = document.getElementById('moreArticleBtn');
+	moreBtn.addEventListener("click", moreBtnFunc);
+	window.articleData = articleData;
 }
 
 function start() {
