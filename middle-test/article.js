@@ -112,25 +112,29 @@ function start() {
 
 }
 function showNews(){
-	newsTemplateAjax(templateString,articleData,5);
-	enterTemplateAjax(templateString,articleData,5);
-	sportsTemplateAjax(templateString,articleData,5);
+
+	news = getDom('newsContents'.children);
+	for(var i = 5, length = news.length; i < length; i++) {
+		news[5].remove();
+	}
 	getDom('newsContents').className = "show";
 	getDom('enterContents').className = "hide";
 	getDom('sportsContents').className = "hide";
 }
 function showEnter(){
-	newsTemplateAjax(templateString,articleData,5);
-	enterTemplateAjax(templateString,articleData,5);
-	sportsTemplateAjax(templateString,articleData,5);
+	enter = getDom('enterContents'.children);
+	for(var i = 5, length = enter.length; i < length; i++) {
+		enter[5].remove();
+	}
 	getDom('newsContents').className = "hide";
 	getDom('enterContents').className = "show";
 	getDom('sportsContents').className = "hide";
 }
 function showSports(){
-	newsTemplateAjax(templateString,articleData,5);
-	enterTemplateAjax(templateString,articleData,5);
-	sportsTemplateAjax(templateString,articleData,5);
+	sports = getDom('sportsContents'.children);
+	for(var i = 5, length = sports.length; i < length; i++) {
+		sports[5].remove();
+	}
 	getDom('newsContents').className = "hide";
 	getDom('enterContents').className = "hide";
 	getDom('sportsContents').className = "show";
