@@ -9,17 +9,17 @@
 
 <div id="container">
 	<ol>
-		<li>뉴스<div id="newsContents"></div></li>
-		<li>연예<div id="enterContents"></div></li>
-		<li>스포츠<div id="sportsContents"></div></li>
+		<li class="tap">뉴스<div id="newsContents"></div></li>
+		<li class="tap">연예<div id="enterContents"></div></li>
+		<li class="tap">스포츠<div id="sportsContents"></div></li>
 	</ol>
 </div>
 
 
 <script type="text/template" id="articleTemplate" >
-	<ol>
+	<ul>
 	<a href="http://media.daum.net/v/{{newsId}}" class="news" target="_blank">{{articleTitle}}</a>
-	</ol>
+	</ul>
 		
 </script>
 
