@@ -8,3 +8,11 @@ a:active, a:hover {text-decoration:underline}
 
 /* 본문 */
 
+
+/* 클래스 */
+.show {
+	display: ;
+}
+.hide {
+	display: none;
+}
