@@ -22,15 +22,15 @@
 
 	<div id="container">
 		<ol class="nav nav-tabs" id="myTab">
-			<li class="active" onclick="showNews()"><a href="#newsContents">뉴스</a></li>
-			<li onclick="showEnter()"><a href="#enterContents" >연예</a></li>
-			<li onclick="showSports()"><a href="#sportsContents" >스포츠</a></li>
+			<li class="active" onclick="contentsInit()"><a href="#newsContents">뉴스</a></li>
+			<li onclick="contentsInit()"><a href="#enterContents" >연예</a></li>
+			<li onclick="contentsInit()"><a href="#sportsContents" >스포츠</a></li>
 		</ol>
 
 		<div class="tab-content">
 			<div class="tab-pane fade in active" id="newsContents"></div>
-			<div class="tab-pane fade hide" id="enterContents"></div>
-			<div class="tab-pane fade hide" id="sportsContents"></div>
+			<div class="tab-pane fade " id="enterContents"></div>
+			<div class="tab-pane fade " id="sportsContents"></div>
 		</div>
 
 		<button id="moreArticleBtn">더보기</button>
