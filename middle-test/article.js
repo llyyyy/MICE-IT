@@ -126,7 +126,6 @@ function showNews(e){
 	// getDom('newsContents').className = "pop";
 	// getDom('enterContents').className = "hide";
 	// getDom('sportsContents').className = "hide";
-	e.preventDefault()
 	$([getDom('newsContents')]).tab('show');
 	var news = getDom('newsContents').children;
 	for(var i = 5, length = news.length ; i < length; i++) {
@@ -139,7 +138,6 @@ function showEnter(e){
 	// getDom('newsContents').className = "hide";
 	// getDom('enterContents').className = "pop";
 	// getDom('sportsContents').className = "hide";
-	e.preventDefault()
 	$([getDom('enterContents')]).tab('show');
 	var enter = getDom('enterContents').children;
 	for(var i = 5, length = enter.length ; i < length; i++) {
@@ -152,7 +150,6 @@ function showSports(e){
 	// getDom('newsContents').className = "hide";
 	// getDom('enterContents').className = "hide";
 	// getDom('sportsContents').className = "pop";
-	e.preventDefault()
 	$([getDom('sportsContents')]).tab('show');
 	var sports = getDom('sportsContents').children;
 	for(var i = 5, length = sports.length ; i < length; i++) {
