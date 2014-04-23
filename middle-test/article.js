@@ -117,6 +117,8 @@ function showNews(){
 	getDom('sportsContents').className = "hide";
 	news = getDom('newsContents').children;
 	for(var i = 5, length = news.length; i < length; i++) {
+		console.log(length);
+		console.log(i);
 	 	news[i].remove();
 	}
 }
