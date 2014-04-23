@@ -157,9 +157,9 @@ function start() {
 		e.preventDefault();
 		$(this).tab('show');
 
-		var contents = $('#' + this.href.split('#')[1])[0];
-		for(var i = 5, length = children.length ; i < length; i++) {
-	 		children[5].remove();
+		var contents = $('#' + this.href.split('#')[1])[0].children;
+		for(var i = 5, length = contents.length ; i < length; i++) {
+	 		contents[5].remove();
 		}
 	});
 	callAjax('articleData.js', callbackArticleAjax);
