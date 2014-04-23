@@ -109,7 +109,6 @@ function callbackArticleAjax(responseText) {
 
 function start() {
 	callAjax('articleData.js', callbackArticleAjax);
-
 }
 
 $('#myTab a').click(function (e) {
@@ -117,7 +116,7 @@ $('#myTab a').click(function (e) {
   $(this).tab('show')
 })
 
-function showNews(){
+function clickTab(){
 
 	news = getDom('newsContents').children;
 	for(var i = 5, length = news.length ; i < length; i++) {
