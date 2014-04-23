@@ -114,7 +114,7 @@ $('#myTab a').click(function (e) {
 
 function showNews(){
 
-	getDom('newsContents').className = "active";
+	getDom('newsContents').className = "pop";
 	getDom('enterContents').className = "hide";
 	getDom('sportsContents').className = "hide";
 
