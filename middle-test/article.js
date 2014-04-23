@@ -157,7 +157,7 @@ function start() {
 		e.preventDefault();
 		$(this).tab('show');
 
-		var contents = $(this.href)[0];
+		var contents = $('#' + this.href.split('#')[1])[0];
 		for(var i = 5, length = children.length ; i < length; i++) {
 	 		children[5].remove();
 		}
