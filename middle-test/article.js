@@ -116,10 +116,10 @@ function showNews(){
 	getDom('newsContents').className = "show";
 	getDom('enterContents').className = "hide";
 	getDom('sportsContents').className = "hide";
-	// news = getDom('newsContents'.children);
-	// for(var i = 5, length = news.length; i < length; i++) {
-	// 	news[i].remove();
-	// }
+	news = getDom('newsContents'.children);
+	for(var i = 5, length = news.length; i < length; i++) {
+	 	news[i].remove();
+	}
 }
 function showEnter(){
 
