@@ -1,8 +1,3 @@
-// $('#myTab a').click(function (e) {
-// e.preventDefault()
-// $(this).tab('show')
-// })
-
 var articleData = [];
 /**
 	https://gist.github.com/tkissing/1347239
@@ -158,6 +153,11 @@ function showSports(e){
 }
 
 function start() {
+	$('#newsTab a').click(function (e) {
+		e.preventDefault();
+		$(this).tab('show');
+	});
+
 	callAjax('articleData.js', callbackArticleAjax);
 }
 

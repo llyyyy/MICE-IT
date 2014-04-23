@@ -22,11 +22,11 @@
 <body> 
 
 	<div id="container">
-		<ol class="nav nav-tabs" id="myTab">
-			<li class="active" onclick="showNews()">뉴스</li>
-			<li onclick="showEnter()">연예</li>
-			<li onclick="showSports()">스포츠</li>
-		</ol>
+		<ul class="nav nav-tabs" id="newsTab">
+			<li class="active"><a href="#newsContents" data-toggle="tab">뉴스</a></li>
+			<li><a href="#enterContents" data-toggle="tab">연예</a></li>
+			<li><a href="#sportsContents" data-toggle="tab">스포츠</a></li>
+		</ul>
 
 		<div class="tab-content">
 			<div class="tab-pane fade in active" id="newsContents"></div>
