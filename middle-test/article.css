@@ -11,8 +11,13 @@
 }
 
 .tap-content {
-
+	float: left;
 	display: block;
 	width : 100%;
 	margin : 10px auto;
+}
+
+.articleContents {
+	display: block;
+	margin-top: 3px;
 }
