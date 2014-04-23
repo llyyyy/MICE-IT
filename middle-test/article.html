@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>많이 본 기사 탭 만들기_2012104139_양지현</title>
-	<link rel="stylesheet" type="text/css" href="article.css" />
+	
 
 <!-- 부트스트랩 -->
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
@@ -16,6 +16,7 @@
 	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
+	<link rel="stylesheet" type="text/css" href="article.css" />
 </head>
 
 <body> 
@@ -37,13 +38,10 @@
 
 	</div>
 
-
-
 	<script type="text/template" id="articleTemplate" >
 		<div class="news"><li>
-		<a href="http://media.daum.net/v/{{newsId}}"class="news" target="_blank">{{articleTitle}}</a>
+		<a href="http://media.daum.net/v/{{newsId}}" target="_blank">{{articleTitle}}</a>
 		</li></div>
-			
 	</script>
 
 	<script src="article.js"></script>

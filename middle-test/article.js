@@ -50,7 +50,6 @@ function newsTemplateAjax(templateString,articleData,length) {
 	var news = '';
 	for(var i=0; i<articleData[0].news.length; i++ ){
 		news = articleData[0].news[i];
-		
 		parseString.push(template(templateString, {articleTitle : articleData[0].news[i].title, newsId : articleData[0].news[i].newsId}));
 	}
 	var stringSplice = parseString.splice(0, typeof length != "undefined" ? length : parseString.length);
