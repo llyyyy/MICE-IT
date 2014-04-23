@@ -112,7 +112,7 @@ function callbackArticleAjax(responseText) {
 	moreBtn.addEventListener("click", moreBtnFunc);
 	window.articleData = articleData;
 }
-function showContents(){
+function contentsInit(){
 	news = getDom('newsContents').children;
 	enter = getDom('enterContents').children;
 	sports = getDom('sportsContents').children;
