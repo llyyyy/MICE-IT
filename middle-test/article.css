@@ -14,11 +14,15 @@
 	float : left;
 	display : block;
 	width : 100%;
-	margin : 10px auto;
 }
 
 .articleContents {
 	display : block;
+	margin : 10px auto;
 	margin-top : 3px;
-	margin-left : 5px;
+}
+
+#moreArticleBtn {
+	display: block;
+	clear:both;
 }
