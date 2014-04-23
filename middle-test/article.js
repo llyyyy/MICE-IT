@@ -107,20 +107,20 @@ function callbackArticleAjax(responseText) {
 	window.articleData = articleData;
 }
 
-function contentsInit(){
-	news = getDom('newsContents').children;
-	enter = getDom('enterContents').children;
-	sports = getDom('sportsContents').children;
+// function contentsInit(){
+// 	news = getDom('newsContents').children;
+// 	enter = getDom('enterContents').children;
+// 	sports = getDom('sportsContents').children;
 
-	for(var i = 5, length = news.length ; i < length; i++) {
-	 	news[5].remove();
-	}
-	for(var i = 5, length = enter.length ; i < length; i++) {
-	 	enter[5].remove();
-	}
-	for(var i = 5, length = sports.length ; i < length; i++) {
-	 	sports[5].remove();
-}
+// 	for(var i = 5, length = news.length ; i < length; i++) {
+// 	 	news[5].remove();
+// 	}
+// 	for(var i = 5, length = enter.length ; i < length; i++) {
+// 	 	enter[5].remove();
+// 	}
+// 	for(var i = 5, length = sports.length ; i < length; i++) {
+// 	 	sports[5].remove();
+// }
 
 // function showNews(){
 
