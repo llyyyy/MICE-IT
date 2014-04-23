@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 /* reset */
-a {color:#333;text-decoration:none}
-a:active, a:hover {text-decoration:underline}
+.articleContents a {color:#333;text-decoration:none}
+.articleContents a:active, a:hover {text-decoration:underline}
 
 /* 본문 */
 #container {
@@ -10,20 +10,9 @@ a:active, a:hover {text-decoration:underline}
 	margin : 10px auto;
 }
 
-/*
 .tap-pane {
 	float: left;
 	display: block;
 	width : 100%;
 	margin : 10px auto;
 }
-
-
-.pop {
-	display : block ;
-}
-.hide {
-	display : none;
-
-}
-*/
