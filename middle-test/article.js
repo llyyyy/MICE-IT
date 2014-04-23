@@ -96,47 +96,11 @@ function callbackArticleAjax(responseText) {
 	enterTemplateAjax(templateString,articleData,5);
 	sportsTemplateAjax(templateString,articleData,5);
 
+	// 더보기버튼 이벤트핸들링
 	var moreBtn = document.getElementById('moreArticleBtn');
 	moreBtn.addEventListener("click", moreBtnFunc);
 	window.articleData = articleData;
 }
-
-
-// function showNews(e){
-
-// 	// getDom('newsContents').className = "pop";
-// 	// getDom('enterContents').className = "hide";
-// 	// getDom('sportsContents').className = "hide";
-// 	$([getDom('newsContents')]).tab('show');
-// 	var news = getDom('newsContents').children;
-// 	for(var i = 5, length = news.length ; i < length; i++) {
-// 	 	news[5].remove();
-// 	}
-// }
-
-// function showEnter(e){
-
-// 	// getDom('newsContents').className = "hide";
-// 	// getDom('enterContents').className = "pop";
-// 	// getDom('sportsContents').className = "hide";
-// 	$([getDom('enterContents')]).tab('show');
-// 	var enter = getDom('enterContents').children;
-// 	for(var i = 5, length = enter.length ; i < length; i++) {
-// 	 	enter[5].remove();
-// 	}
-// }
-
-// function showSports(e){
-
-// 	// getDom('newsContents').className = "hide";
-// 	// getDom('enterContents').className = "hide";
-// 	// getDom('sportsContents').className = "pop";
-// 	$([getDom('sportsContents')]).tab('show');
-// 	var sports = getDom('sportsContents').children;
-// 	for(var i = 5, length = sports.length ; i < length; i++) {
-// 	 	sports[5].remove();
-// 	}
-// }
 
 function start() {
 	$('#newsTab a').click(function (e) {
@@ -150,7 +114,6 @@ function start() {
 	});
 	callAjax('articleData.js', callbackArticleAjax);
 }
-
 
 //시작 
 start();
