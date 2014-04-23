@@ -5,47 +5,46 @@
 	<title>많이 본 기사 탭 만들기_2012104139_양지현</title>
 	<link rel="stylesheet" type="text/css" href="article.css" />
 
-	<!-- 부트스트랩 -->
-		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
-		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<!-- 부트스트랩 -->
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
-		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-	
 </head>
 
-
 <body> 
+	
+	<div id="container">
+		<ol class="nav nav-tabs" id="myTab">
+			<li class="active" onclick="showNews()"><a href="#news">뉴스</a></li>
+			<li onclick="showEnter()"><a href="#enter" data-toggle="tab">연예</a></li>
+			<li onclick="showSports()"><a href="#sports" data-toggle="tab">스포츠</a></li>
+		</ol>
 
-<div id="container">
-	<ol class="nav nav-tabs" id="myTab">
-		<li class="active" onclick="showNews()"><a href="#news">뉴스</a></li>
-		<li onclick="showEnter()"><a href="#enter" data-toggle="tab">연예</a></li>
-		<li onclick="showSports()"><a href="#sports" data-toggle="tab">스포츠</a></li>
-	</ol>
+		<div class="tab-content">
+			<div class="tab-pane fade in active" id="newsContents"></div>
+			<div class="tab-pane fade hide" id="enterContents"></div>
+			<div class="tab-pane fade hide" id="sportsContents"></div>
+		</div>
 
-	<div class="tab-content">
-		<div class="tab-pane fade in active" id="newsContents"></div>
-		<div class="tab-pane fade hide" id="enterContents"></div>
-		<div class="tab-pane fade hide" id="sportsContents"></div>
+		<button id="moreArticleBtn">더보기</button>
+
 	</div>
 
-	<button id="moreArticleBtn">더보기</button>
+	<script type="text/template" id="articleTemplate" >
+		<ul>
+		<a href="http://media.daum.net/v/{{newsId}}" class="news" target="_blank">{{articleTitle}}</a>
+		</ul>
+			
+	</script>
 
-</div>
+	<script src="article.js"></script>
 
-<script type="text/template" id="articleTemplate" >
-	<ul>
-	<a href="http://media.daum.net/v/{{newsId}}" class="news" target="_blank">{{articleTitle}}</a>
-	</ul>
-		
-</script>
-
-<script src="article.js"></script>
 </body>
 </html>
