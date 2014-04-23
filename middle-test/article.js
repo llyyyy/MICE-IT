@@ -51,8 +51,7 @@ function newsTemplateAjax(templateString,articleData,length) {
 	for(var i=0; i<articleData[0].news.length; i++ ){
 		news = articleData[0].news[i];
 		
-		parseString.push(template(templateString, {articleTitle : articleData[0].news[i].title, newsId : articleData[0].news[i].newsId})
-						);
+		parseString.push(template(templateString, {articleTitle : articleData[0].news[i].title, newsId : articleData[0].news[i].newsId}));
 	}
 	var stringSplice = parseString.splice(0, typeof length != "undefined" ? length : parseString.length);
 	getDom('newsContents').innerHTML = stringSplice.join("");
@@ -64,8 +63,7 @@ function enterTemplateAjax(templateString,articleData,length) {
 	var enter = '';
 	for(var i=0; i<articleData[1].enter.length; i++ ){
 		enter = articleData[1].enter[i];
-		parseString.push(template(templateString, {articleTitle : articleData[1].enter[i].title, newsId : articleData[1].enter[i].newsId})
-						);
+		parseString.push(template(templateString, {articleTitle : articleData[1].enter[i].title, newsId : articleData[1].enter[i].newsId}));
 	}
 	var stringSplice = parseString.splice(0, typeof length != "undefined" ? length : parseString.length);
 	getDom('enterContents').innerHTML = stringSplice.join("");
@@ -77,8 +75,7 @@ function sportsTemplateAjax(templateString,articleData,length) {
 	var sports = '';
 	for(var i=0; i<articleData[2].sports.length; i++ ){
 		sports = articleData[2].sports[i];
-		parseString.push(template(templateString, {articleTitle : articleData[2].sports[i].title, newsId : articleData[2].sports[i].newsId})
-						);
+		parseString.push(template(templateString, {articleTitle : articleData[2].sports[i].title, newsId : articleData[2].sports[i].newsId}));
 	}
 	var stringSplice = parseString.splice(0, typeof length != "undefined" ? length : parseString.length);
 	getDom('sportsContents').innerHTML = stringSplice.join("");
