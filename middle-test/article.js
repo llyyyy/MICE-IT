@@ -107,64 +107,49 @@ function callbackArticleAjax(responseText) {
 	window.articleData = articleData;
 }
 
-function start() {
-	callAjax('articleData.js', callbackArticleAjax);
-}
-
 $('#myTab a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 })
 
-function clickTab(){
+function start() {
+	callAjax('articleData.js', callbackArticleAjax);
+}
+
+function showNews(){
+	getDom('newsContents').className = "pop";
+	getDom('enterContents').className = "hide";
+	getDom('sportsContents').className = "hide";
 
 	news = getDom('newsContents').children;
 	for(var i = 5, length = news.length ; i < length; i++) {
 	 	news[5].remove();
 	}
+}
+
+function showEnter(){
+
+	getDom('newsContents').className = "hide";
+	getDom('enterContents').className = "pop";
+	getDom('sportsContents').className = "hide";
 
 	enter = getDom('enterContents').children;
 	for(var i = 5, length = enter.length ; i < length; i++) {
 	 	enter[5].remove();
 	}
+}
+
+function showSports(){
+
+	getDom('newsContents').className = "hide";
+	getDom('enterContents').className = "hide";
+	getDom('sportsContents').className = "pop";
 
 	sports = getDom('enterContents').children;
 	for(var i = 5, length = sports.length ; i < length; i++) {
 	 	sports[5].remove();
 	}
 }
-
-
-
-
-// function showNews(){
-// 	getDom('newsContents').className = "show";
-// 	getDom('enterContents').className = "hide";
-// 	getDom('sportsContents').className = "hide";
-
-// 	news = getDom('newsContents').children;
-// 	for(var i = 5, length = news.length ; i < length; i++) {
-// 	 	news[5].remove();
-// 	}
-// }
-// function showEnter(){
-
-// 	getDom('newsContents').className = "hide";
-// 	getDom('enterContents').className = "show";
-// 	getDom('sportsContents').className = "hide";
-
-// 	enter = getDom('enterContents').children;
-// 	for(var i = 5, length = enter.length ; i < length; i++) {
-// 	 	enter[5].remove();
-// 	}
-// }
-// function showSports(){
-
-// 	sports = getDom('enterContents').children;
-// 	for(var i = 5, length = sports.length ; i < length; i++) {
-// 	 	sports[5].remove();
-// 	}
-// }
 
 //시작 
 start();
