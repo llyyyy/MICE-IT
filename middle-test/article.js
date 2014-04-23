@@ -1,6 +1,6 @@
 $('#myTab a').click(function (e) {
 e.preventDefault()
-$(this).tab('show')
+$('#articleTemplate a').tab('show')
 })
 
 var articleData = [];
