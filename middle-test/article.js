@@ -60,9 +60,9 @@ function enterTemplateAjax(templateString,articleData,length) {
 	var enter = '';
 	for(var i=0; i<articleData[1].enter.length; i++ ){
 		enter = articleData[1].enter[i];
-		parseString.push('<div class="news"><ul>'
+		parseString.push('<div class="news"><li>'
 						+ template(templateString, {articleTitle : articleData[1].enter[i].title, newsId : articleData[1].enter[i].newsId})
-						+ '</ul></div>');
+						+ '</li></div>');
 	}
 	var stringSplice = parseString.splice(0, typeof length != "undefined" ? length : parseString.length);
 	getDom('enterContents').innerHTML = stringSplice.join("");
@@ -111,27 +111,61 @@ function start() {
 	callAjax('articleData.js', callbackArticleAjax);
 
 }
+
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
 function showNews(){
-	getDom('newsContents').className = "show";
-	getDom('enterContents').className = "hide";
-	getDom('sportsContents').className = "hide";
+
 	news = getDom('newsContents').children;
 	for(var i = 5, length = news.length ; i < length; i++) {
 	 	news[5].remove();
 	}
-}
-function showEnter(){
 
-	getDom('newsContents').className = "hide";
-	getDom('enterContents').className = "show";
-	getDom('sportsContents').className = "hide";
-}
-function showSports(){
+	enter = getDom('enterContents').children;
+	for(var i = 5, length = enter.length ; i < length; i++) {
+	 	enter[5].remove();
+	}
 
-	getDom('newsContents').className = "hide";
-	getDom('enterContents').className = "hide";
-	getDom('sportsContents').className = "show";
+	sports = getDom('enterContents').children;
+	for(var i = 5, length = sports.length ; i < length; i++) {
+	 	sports[5].remove();
+	}
 }
+
+
+
+
+// function showNews(){
+// 	getDom('newsContents').className = "show";
+// 	getDom('enterContents').className = "hide";
+// 	getDom('sportsContents').className = "hide";
+
+// 	news = getDom('newsContents').children;
+// 	for(var i = 5, length = news.length ; i < length; i++) {
+// 	 	news[5].remove();
+// 	}
+// }
+// function showEnter(){
+
+// 	getDom('newsContents').className = "hide";
+// 	getDom('enterContents').className = "show";
+// 	getDom('sportsContents').className = "hide";
+
+// 	enter = getDom('enterContents').children;
+// 	for(var i = 5, length = enter.length ; i < length; i++) {
+// 	 	enter[5].remove();
+// 	}
+// }
+// function showSports(){
+
+// 	sports = getDom('enterContents').children;
+// 	for(var i = 5, length = sports.length ; i < length; i++) {
+// 	 	sports[5].remove();
+// 	}
+// }
 
 //시작 
 start();
