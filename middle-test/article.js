@@ -117,6 +117,7 @@ function start() {
 }
 
 function showNews(){
+	
 	getDom('newsContents').className = "pop";
 	getDom('enterContents').className = "hide";
 	getDom('sportsContents').className = "hide";
