@@ -112,13 +112,9 @@ $('#myTab a').click(function (e) {
   $(this).tab('show')
 })
 
-function start() {
-	callAjax('articleData.js', callbackArticleAjax);
-}
-
 function showNews(){
-	
-	getDom('newsContents').className = "pop";
+
+	getDom('newsContents').className = "active";
 	getDom('enterContents').className = "hide";
 	getDom('sportsContents').className = "hide";
 
@@ -151,6 +147,11 @@ function showSports(){
 	 	sports[5].remove();
 	}
 }
+
+function start() {
+	callAjax('articleData.js', callbackArticleAjax);
+}
+
 
 //시작 
 start();
