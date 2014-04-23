@@ -143,7 +143,7 @@ function showSports(){
 	getDom('enterContents').className = "hide";
 	getDom('sportsContents').className = "pop";
 
-	sports = getDom('enterContents').children;
+	sports = getDom('sportsContents').children;
 	for(var i = 5, length = sports.length ; i < length; i++) {
 	 	sports[5].remove();
 	}
