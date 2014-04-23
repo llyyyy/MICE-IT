@@ -1,3 +1,8 @@
+$('#myTab a').click(function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+
 var articleData = [];
 /**
 	https://gist.github.com/tkissing/1347239
