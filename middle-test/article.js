@@ -85,12 +85,15 @@ function sportsTemplateAjax(templateString,articleData,length) {
 	}
 	var stringSplice = parseString.splice(0, typeof length != "undefined" ? length : parseString.length);
 	getDom('sportsContents').innerHTML = stringSplice.join("");
+
+	var moreBtn = document.getElementById('moreArticleBtn');
+	moreBtn.addEventListener("click", moreBtnFunc);
 }
 
 function moreBtnFunc() {
 	var templateString = getDom('articleTemplate').innerHTML;
-	newsTemplateAjax(templateString,articleData);
-	enterTemplateAjax(templateString,articleData);
+	// newsTemplateAjax(templateString,articleData);
+	// enterTemplateAjax(templateString,articleData);
 	sportsTemplateAjax(templateString,articleData);
 }
 
@@ -107,8 +110,8 @@ function callbackArticleAjax(responseText) {
 	enterTemplateAjax(templateString,articleData,5);
 	sportsTemplateAjax(templateString,articleData,5);
 
-	var moreBtn = document.getElementById('moreArticleBtn');
-	moreBtn.addEventListener("click", moreBtnFunc);
+	// var moreBtn = document.getElementById('moreArticleBtn');
+	// moreBtn.addEventListener("click", moreBtnFunc);
 	window.articleData = articleData;
 }
 
@@ -127,41 +130,41 @@ function callbackArticleAjax(responseText) {
 // 	 	sports[5].remove();
 // }
 
-function showNews(){
+// function showNews(){
 
-	// getDom('newsContents').className = "pop";
-	// getDom('enterContents').className = "hide";
-	// getDom('sportsContents').className = "hide";
+// 	getDom('newsContents').className = "pop";
+// 	getDom('enterContents').className = "hide";
+// 	getDom('sportsContents').className = "hide";
 
-	news = getDom('newsContents').children;
-	for(var i = 5, length = news.length ; i < length; i++) {
-	 	news[5].remove();
-	}
-}
+// 	news = getDom('newsContents').children;
+// 	for(var i = 5, length = news.length ; i < length; i++) {
+// 	 	news[5].remove();
+// 	}
+// }
 
-function showEnter(){
+// function showEnter(){
 
-	// getDom('newsContents').className = "hide";
-	// getDom('enterContents').className = "pop";
-	// getDom('sportsContents').className = "hide";
+// 	getDom('newsContents').className = "hide";
+// 	getDom('enterContents').className = "pop";
+// 	getDom('sportsContents').className = "hide";
 
-	enter = getDom('enterContents').children;
-	for(var i = 5, length = enter.length ; i < length; i++) {
-	 	enter[5].remove();
-	}
-}
+// 	enter = getDom('enterContents').children;
+// 	for(var i = 5, length = enter.length ; i < length; i++) {
+// 	 	enter[5].remove();
+// 	}
+// }
 
-function showSports(){
+// function showSports(){
 
-	// getDom('newsContents').className = "hide";
-	// getDom('enterContents').className = "hide";
-	// getDom('sportsContents').className = "pop";
+// 	getDom('newsContents').className = "hide";
+// 	getDom('enterContents').className = "hide";
+// 	getDom('sportsContents').className = "pop";
 
-	sports = getDom('sportsContents').children;
-	for(var i = 5, length = sports.length ; i < length; i++) {
-	 	sports[5].remove();
-	}
-}
+// 	sports = getDom('sportsContents').children;
+// 	for(var i = 5, length = sports.length ; i < length; i++) {
+// 	 	sports[5].remove();
+// 	}
+// }
 
 function start() {
 	callAjax('articleData.js', callbackArticleAjax);
