@@ -156,8 +156,12 @@ function start() {
 	$('#newsTab a').click(function (e) {
 		e.preventDefault();
 		$(this).tab('show');
-	});
 
+		var contents = this.children;
+		for(var i = 5, length = children.length ; i < length; i++) {
+	 		children[5].remove();
+		}
+	});
 	callAjax('articleData.js', callbackArticleAjax);
 }
 
