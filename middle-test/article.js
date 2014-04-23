@@ -51,7 +51,7 @@ function newsTemplateAjax(templateString,articleData,length) {
 	for(var i=0; i<articleData[0].news.length; i++ ){
 		news = articleData[0].news[i];
 		
-		parseString.push('<div class="articleContents"><ul>'
+		parseString.push('<div class="news"><ul>'
 						+ template(templateString, {articleTitle : articleData[0].news[i].title, newsId : articleData[0].news[i].newsId})
 						+ '</ul></div>');
 	}
@@ -65,7 +65,7 @@ function enterTemplateAjax(templateString,articleData,length) {
 	var enter = '';
 	for(var i=0; i<articleData[1].enter.length; i++ ){
 		enter = articleData[1].enter[i];
-		parseString.push('<div class="articleContents"><li>'
+		parseString.push('<div class="news"><li>'
 						+ template(templateString, {articleTitle : articleData[1].enter[i].title, newsId : articleData[1].enter[i].newsId})
 						+ '</li></div>');
 	}
@@ -79,7 +79,7 @@ function sportsTemplateAjax(templateString,articleData,length) {
 	var sports = '';
 	for(var i=0; i<articleData[2].sports.length; i++ ){
 		sports = articleData[2].sports[i];
-		parseString.push('<div class="articleContents"><ul>'
+		parseString.push('<div class="news"><ul>'
 						+ template(templateString, {articleTitle : articleData[2].sports[i].title, newsId : articleData[2].sports[i].newsId})
 						+ '</ul></div>');
 	}
