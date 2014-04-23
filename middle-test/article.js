@@ -116,7 +116,7 @@ function showNews(){
 	getDom('enterContents').className = "hide";
 	getDom('sportsContents').className = "hide";
 	news = getDom('newsContents').children;
-	for(var i = 5; i < news.length; i++) {
+	for(var i = 5, length = news.length ; i < length; i++) {
 	 	news[5].remove();
 	}
 }
