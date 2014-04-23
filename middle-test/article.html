@@ -44,7 +44,13 @@
 			
 	</script>
 
-	<script src="article.js"></script>
+	<script src="article.js">
+
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+	</script>
 
 </body>
 </html>
