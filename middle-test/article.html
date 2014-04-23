@@ -28,9 +28,9 @@
 		</ol>
 
 		<div class="tab-content">
-			<div class="tab-pane fade in active" id="newsContents"></div>
-			<div class="tab-pane fade " id="enterContents"></div>
-			<div class="tab-pane fade " id="sportsContents"></div>
+			<div class="tab-pane fade in active" id="newsContents"><ul></ul></div>
+			<div class="tab-pane fade " id="enterContents"><ul></ul></div>
+			<div class="tab-pane fade " id="sportsContents"><ul></ul></div>
 		</div>
 
 		<button id="moreArticleBtn">더보기</button>
@@ -40,9 +40,9 @@
 
 
 	<script type="text/template" id="articleTemplate" >
-		<ul>
-		<a href="http://media.daum.net/v/{{newsId}}" class="news" target="_blank">{{articleTitle}}</a>
-		</ul>
+		<div class="articleContents"><li>
+		<a href="http://media.daum.net/v/{{newsId}}"  target="_blank">{{articleTitle}}</a>
+		</li></div>
 			
 	</script>
 

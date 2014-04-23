@@ -8,10 +8,13 @@ a:active, a:hover {text-decoration:underline}
 
 /* 본문 */
 #container {
-	width:50%;
+	width:40%;
 	margin: 10px auto;
 }
 
+.articleContents {
+
+}
 /*.nav-tap {
 	float:left;
 }
