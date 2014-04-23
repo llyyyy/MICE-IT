@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
 /* reset */
-/*li{list-style: none}*/
-
 a {color:#333;text-decoration:none}
 a:active, a:hover {text-decoration:underline}
 
