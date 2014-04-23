@@ -37,6 +37,13 @@
 
 	</div>
 
+	<script>
+		$('#myTab a').click(function (e) {
+		e.preventDefault()
+		$(this).tab('show')
+		})
+	</script>
+
 	<script type="text/template" id="articleTemplate" >
 		<ul>
 		<a href="http://media.daum.net/v/{{newsId}}" class="articleContents" target="_blank">{{articleTitle}}</a>
@@ -44,13 +51,7 @@
 			
 	</script>
 
-	<script src="article.js">
-
-$('#myTab a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
-	</script>
+	<script src="article.js"></script>
 
 </body>
 </html>
