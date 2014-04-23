@@ -156,8 +156,8 @@ function start() {
 	$('#newsTab a').click(function (e) {
 		e.preventDefault();
 		$(this).tab('show');
-
-		var contents = this.children;
+		console.log(this);
+		var contents = this[0].children;
 		for(var i = 5, length = children.length ; i < length; i++) {
 	 		children[5].remove();
 		}
