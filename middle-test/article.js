@@ -40,7 +40,8 @@ function getDom(id) {
 }
 
 function newsTemplateAjax(templateString,articleData,length) {
-	// 뉴스 템플릿
+
+	// 뉴스 템플릿 : contents 삽입
 	var parseString = [];
 	var news = '';
 	for(var i=0; i<articleData[0].news.length; i++ ){
@@ -52,7 +53,8 @@ function newsTemplateAjax(templateString,articleData,length) {
 }
 
 function enterTemplateAjax(templateString,articleData,length) {
-	// 연예 템플릿
+
+	// 연예 템플릿 : contents 삽입
 	var parseString = [];
 	var enter = '';
 	for(var i=0; i<articleData[1].enter.length; i++ ){
@@ -64,7 +66,8 @@ function enterTemplateAjax(templateString,articleData,length) {
 }
 
 function sportsTemplateAjax(templateString,articleData,length) {
-	// 스포츠 템플릿
+
+	// 스포츠 템플릿 : contents 삽입
 	var parseString = [];
 	var sports = '';
 	for(var i=0; i<articleData[2].sports.length; i++ ){
@@ -77,6 +80,8 @@ function sportsTemplateAjax(templateString,articleData,length) {
 }
 
 function moreBtnFunc() {
+
+	// 더보기버튼 클릭했을 때, 모든 contents보여주기
 	var templateString = getDom('articleTemplate').innerHTML;
 	newsTemplateAjax(templateString,articleData);
 	enterTemplateAjax(templateString,articleData);
@@ -103,10 +108,13 @@ function callbackArticleAjax(responseText) {
 }
 
 function start() {
+
+	// tab 클릭했을 때
 	$('#newsTab a').click(function (e) {
 		e.preventDefault();
 		$(this).tab('show');
 
+		// 더보기버튼으로 생긴 나머지 contents를 다시 5개로 제한해서 보여주기(remove사용)
 		var contents = $('#' + this.href.split('#')[1])[0].children;
 		for(var i = 5, length = contents.length ; i < length; i++) {
 	 		contents[5].remove();
