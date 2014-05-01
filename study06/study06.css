@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+#box {
+		position: absolute;
+		background-color:#eee;
+		top:10px;
+		left:10px;
+		width:100px;
+		height:100px}
+		
+#go {
+		position: absolute;
+		z-index: 10px;
+}
